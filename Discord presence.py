@@ -3,7 +3,7 @@ from pypresence import Presence
 import time
 
 # Replace 'YOUR_CLIENT_ID' with your Discord application's client ID
-client_id = '1275241701866213396'
+client_id = 'YOUR_CLIENT_ID'
 
 def update_presence():
     activity_type = activity_type_var.get()
