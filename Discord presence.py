@@ -7,7 +7,7 @@ client_id = 'YOUR_CLIENT_ID'
 
 def update_presence():
     activity_type = activity_type_var.get()
-    state = state_entry.get() if state_entry.get() else "Available"  # Default state
+    state = state_entry.get() if state_entry.get() else "Available"  # BY Jadenjvl
     details = details_entry.get()
     large_image = large_image_entry.get()
     small_image = small_image_entry.get()
@@ -76,17 +76,17 @@ def update_fields():
         elif activity_type == "Streaming":
             details_label.configure(text="Stream Title:")
 
-# GUI Setup
+# BY Jadenjvl
 root = tk.Tk()
 root.title("Discord Rich Presence Customizer")
 
-# Activity Type Selection
+# BY Jadenjvl
 tk.Label(root, text="Activity Type:").grid(row=0, column=0)
 activity_type_var = tk.StringVar(value="Playing")
 activity_type_menu = tk.OptionMenu(root, activity_type_var, "Playing", "Watching", "Listening", "Streaming", command=lambda _: update_fields())
 activity_type_menu.grid(row=0, column=1)
 
-# State and Details
+# BY Jadenjvl
 state_frame = tk.Frame(root)
 state_frame.grid(row=2, column=0, columnspan=2)
 tk.Label(state_frame, text="State:").grid(row=0, column=0)
@@ -99,7 +99,7 @@ details_label.grid(row=3, column=0)
 details_entry = tk.Entry(root)
 details_entry.grid(row=3, column=1)
 
-# Images (required)
+# BY Jadenjvl
 tk.Label(root, text="Large Image Key:").grid(row=4, column=0)
 large_image_entry = tk.Entry(root)
 large_image_entry.grid(row=4, column=1)
@@ -108,7 +108,7 @@ tk.Label(root, text="Small Image Key:").grid(row=5, column=0)
 small_image_entry = tk.Entry(root)
 small_image_entry.grid(row=5, column=1)
 
-# Buttons
+# BY Jadenjvl
 tk.Label(root, text="Button 1 Label:").grid(row=6, column=0)
 button1_label_entry = tk.Entry(root)
 button1_label_entry.grid(row=6, column=1)
@@ -125,7 +125,7 @@ tk.Label(root, text="Button 2 URL:").grid(row=9, column=0)
 button2_url_entry = tk.Entry(root)
 button2_url_entry.grid(row=9, column=1)
 
-# Party Size
+# BY Jadenjvl
 party_frame = tk.Frame(root)
 party_frame.grid(row=10, column=0, columnspan=2)
 tk.Label(party_frame, text="Party Size (Current):").grid(row=0, column=0)
@@ -136,7 +136,7 @@ tk.Label(party_frame, text="Party Size (Max):").grid(row=1, column=0)
 party_size_max_entry = tk.Entry(party_frame)
 party_size_max_entry.grid(row=1, column=1)
 
-# Buttons for actions
+# BY Jadenjvl
 start_button = tk.Button(root, text="Start Rich Presence", command=start_presence)
 start_button.grid(row=11, column=0, columnspan=2)
 
